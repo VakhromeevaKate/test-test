@@ -10,6 +10,8 @@ server.get('/', (req, res) => {
     template: '<button @click="count++">{{ count }}</button>'
   })
 
+  app.mount('#app')
+
   renderToString(app).then((html) => {
     res.send(`
     <!DOCTYPE html>
